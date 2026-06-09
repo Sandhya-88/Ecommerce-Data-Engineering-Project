@@ -1,6 +1,6 @@
-INSERT INTO customers
+insert into customers
 (customer_id, name, email, city, signup_date)
-VALUES
+values
 (1, 'Rahul', 'rahul@gmail.com', 'Delhi', '2025-01-10'),
 (2, 'Priya', 'priya@gmail.com', 'Mumbai', '2025-01-15'),
 (3, 'Aman', 'aman@gmail.com', 'Bangalore', '2025-02-01'),
@@ -8,9 +8,9 @@ VALUES
 
 
 
-INSERT INTO products
+insert into products
 (product_id, product_name, category, price)
-VALUES
+values
 (101, 'Laptop', 'Electronics', 55000),
 (102, 'Mobile Phone', 'Electronics', 25000),
 (103, 'Headphones', 'Accessories', 3000),
@@ -18,9 +18,9 @@ VALUES
 
 
 
-INSERT INTO orders
+insert into orders
 (order_id, customer_id, product_id, order_date, quantity)
-VALUES
+values
 (5001, 1, 101, '2025-03-01', 1),
 (5002, 2, 102, '2025-03-02', 2),
 (5003, 3, 103, '2025-03-05', 3),
@@ -28,9 +28,9 @@ VALUES
 
 
 
-INSERT INTO payments
+insert into payments
 (payment_id, order_id, payment_method, amount, status)
-VALUES
+values
 (9001, 5001, 'UPI', 55000, 'Success'),
 (9002, 5002, 'Card', 50000, 'Success'),
 (9003, 5003, 'Cash', 9000, 'Pending'),

@@ -1,24 +1,27 @@
 #ETL Cleaning
 
 --Duplicate check
-SELECT
+
+select
     email,
-    COUNT(*)
-FROM customers
-GROUP BY email
-HAVING COUNT(*) > 1;
+    count(*)
+from customers
+group by email
+having count(*) > 1;
 
 
 
 --NULL value check
-SELECT *
-FROM customers
-WHERE email IS NULL
-   OR city IS NULL
-   OR signup_date IS NULL;
+
+select *
+from customers
+where email is null
+   or city is null
+   or signup_date is null;
 
 
---Invalid value check
-SELECT *
-FROM products
-WHERE price <= 0;
+--invalid value check
+
+select *
+from products
+where price <= 0;

@@ -1,7 +1,7 @@
 -- Q1: What is the total revenue generated from successful payments?
 
 select
-    SUM(amount) AS total_revenue
+    sum(amount) as total_revenue
 from payments
 where status = 'Success';
 

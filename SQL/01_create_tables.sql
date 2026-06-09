@@ -1,55 +1,55 @@
---customers TABLE
-CREATE TABLE customers
+--customers table
+create table customers
 (
-    customer_id INT PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    city VARCHAR(50),
-    signup_date DATE
+    customer_id int primary key,
+    name varchar(100),
+    email varchar(100),
+    city varchar(50),
+    signup_date date
 );
 
 
 
 
---products TABLE
-CREATE TABLE products
+--products table
+create table products
 (
-    product_id INT PRIMARY KEY,
-    product_name VARCHAR(100),
-    category VARCHAR(50),
-    price DECIMAL(10,2)
+    product_id int primary key,
+    product_name varchar(100),
+    category varchar(50),
+    price decimal(10,2)
 );
 
 
 
 
---orders TABLE
-CREATE TABLE orders
+--orders table
+create table orders
 (
-    order_id INT PRIMARY KEY,
-    customer_id INT,
-    product_id INT,
-    order_date DATE,
-    quantity INT,
+    order_id int primary key,
+    customer_id int,
+    product_id int,
+    order_date date,
+    quantity int,
 
-    FOREIGN KEY (customer_id)
-    REFERENCES customers(customer_id),
+    foreign key (customer_id)
+    references customers(customer_id),
 
-    FOREIGN KEY (product_id)
-    REFERENCES products(product_id)
+    foreign key (product_id)
+    references products(product_id)
 );
 
 
 
---payments TABLE
-CREATE TABLE payments
+--payments table
+create table payments
 (
-    payment_id INT PRIMARY KEY,
-    order_id INT,
-    payment_method VARCHAR(50),
-    amount DECIMAL(10,2),
-    status VARCHAR(20),
+    payment_id int primary key,
+    order_id int,
+    payment_method varchar(50),
+    amount decimal(10,2),
+    status varchar(20),
 
-    FOREIGN KEY (order_id)
-    REFERENCES orders(order_id)
+    foreign key (order_id)
+    references orders(order_id)
 );
